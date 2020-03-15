@@ -1,0 +1,67 @@
+<%= bootstrap_form_with(model: employee, local: true) do |form| %>
+  <% if employee.errors.any? %>
+    <div class="alert alert-danger",style= "width: 20px;">
+      <h6><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h6>
+
+      <ul>
+      <% employee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class="container",width=100px">
+  <div class="container-fluid" width=100px">
+
+  <form role="form" action="/employees" accept-charset="UTF-8" method="post",style= "left: 200px" >
+  <div class="field">
+    <div class="form-group row">
+
+    <%= form.label :employee_name,class: :"col-sm-2 col-form-label" %>
+    <div class="col-sm-3">
+    <%= form.text_field :employee_name, id: :employee_employee_name,class: :"form-control ",hide_label: true %>
+    </div>
+  </div>
+  </div>
+  <div class="field">
+<div class="form-group row">
+
+      <%= form.label :age,class: :"col-sm-2 col-form-label" %>
+      <div class="col-sm-3">
+    <%= form.number_field :age, id: :employee_age,class: :"form-control ",hide_label: true  %>
+    </div>
+  </div>
+</div>
+<div class="field">
+<div class="form-group row">
+
+    <%= form.label :gender,class: :"col-sm-2 col-form-label" %>
+    <div class="col-sm-3">
+        <div class="form-check form-check-inline">
+
+    &nbsp&nbsp<%= form.radio_button 'gender','Male' %>
+      <%= form.radio_button 'gender','Female' %>
+        </div>
+  </div>
+  </div>
+</div>
+  <div class="field">
+<div class="form-group row">
+      <%= form.label :desgination,class: :"col-sm-2 col-form-label" %>
+    <div class="col-sm-3">
+    <%= form.text_field :desgination, id: :employee_desgination,class: :"form-control " ,hide_label: true %>
+    </div>
+  </div>
+</div><br>
+<div class="actions", style= "margin-left : 85px;">
+    <%= form.submit  class: "btn btn-info btn-sm"%>
+    <%= link_to "Back", employees_path,  class: "btn btn-secondary btn-sm", style: "margin-left: 20px;" %>
+
+  </div>
+</form>
+</div>
+</div>
+
+
+<% end %>

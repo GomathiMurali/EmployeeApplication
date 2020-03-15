@@ -1,0 +1,43 @@
+
+
+<div class="container">
+  <br>
+  <p id="notice"><%= notice %></p>
+
+  <div class="page-header">
+  <center>  <h6>Employee Details</h6></center>
+</div>
+
+<div class="container",style= "width:100px;">
+  <br>
+<table class="table table-bordered-sm">
+
+   <thead class="table-secondary">
+    <tr align="center">
+      <th>Employee Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Desgination</th>
+      <th></th>
+      <th>Action</th>
+      <th ></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @employees.each do |employee| %>
+      <tr align="center">
+        <td ><%= employee.employee_name %></td>
+        <td><%= employee.age %></td>
+        <td><%= employee.gender %></td>
+        <td><%= employee.desgination %></td>
+        <td><%= link_to ('<i class= "far fa-eye"></i>').html_safe, employee ,class: "btn btn-secondary btn-sm" %></td>
+        <td><%= link_to ('<i class= "fas fa-edit"></i>').html_safe, edit_employee_path(employee),class: "btn btn-info btn-sm" %></td>
+        <td><%= link_to ('<i class= "fas fa-trash"></i>').html_safe, employee, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</div>
