@@ -10,11 +10,11 @@
       </ul>
     </div>
   <% end %>
-
- <div class="container",width=100px">
-  <div class="container-fluid" width=100px">
-
-  <form role="form" action="/employees" accept-charset="UTF-8" method="post",style= "left: 200px" >
+ <div class = "w-75 p-3">
+ <div class="container">
+  <div class="container-fluid", style= "margin-left:200px">
+<br>
+  <form role="form" action="/employees" accept-charset="UTF-8" method="post" >
   <div class="field">
     <div class="form-group row">
 
@@ -55,13 +55,13 @@
   </div>
 </div><br>
 <div class="actions", style= "margin-left : 85px;">
-    <%= form.submit  class: "btn btn-info btn-sm"%>
-    <%= link_to "Back", employees_path,  class: "btn btn-secondary btn-sm", style: "margin-left: 20px;" %>
+    <%= form.submit  class: "btn btn-info btn-sm",  style: "font-weight: bold;"%>
+    <%= link_to "Back", employees_path,  class: "btn btn-secondary btn-sm", style: "margin-left: 20px; font-weight: bold;" %>
 
   </div>
 </form>
 </div>
 </div>
-
+</div>
 
 <% end %>

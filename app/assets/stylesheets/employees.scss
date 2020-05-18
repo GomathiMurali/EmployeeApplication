@@ -9,6 +9,23 @@ body {
     margin: 0px !important;
     font-size: 13px;
 }
+a  {
+    color: #337ab7;
+    text-decoration: none;
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+}
+body {
+    color: #797979;
+    background: #eaeaea;
+    font-family: 'Ruda', sans-serif;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-size: 13px;
+}
 
 p {
     font-family: 'Poppins', sans-serif;
@@ -42,26 +59,28 @@ a, a:hover, a:focus {
 
 }
 
-#sidebar ul p {
+#sidebar ul p i{
     color: #fff;
     padding: 10px;
 }
 
-#sidebar ul li a {
+#sidebar ul li  a {
     padding: 10px;
     font-size: 1.1em;
     display: block;
 }
-#sidebar ul li a:hover {
+#sidebar ul li  a:hover {
     color: #fff;
     background: #4ECDC4;
 }
-
+#sidebar hr{
+  color: blue;
+}
 #sidebar ul li.active > a, a[aria-expanded="true"] {
     color: #fff;
     background: #4ECDC4;
 }
-ul ul a {
+ul ul a  {
     font-size: 0.9em !important;
     padding-left: 30px !important;
     background: #4ECDC4;

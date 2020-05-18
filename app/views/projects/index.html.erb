@@ -1,0 +1,48 @@
+<div class="container">
+  <br>
+  <p id="notice"><%= notice %></p>
+
+  <div class="page-header">
+  <center>  <h6>Project Details</h6></center>
+</div>
+
+<div class="container",style= "width:100px;">
+  <br>
+<table class="table table-bordered-sm">
+
+   <thead class="table-secondary">
+    <tr align="center">
+
+      <th>Project name</th>
+      <th>Client</th>
+      <th>Location</th>
+      <th>Team size</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Cost</th>
+      <th></th>
+      <th>Action</th>
+      <th ></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.project_name %></td>
+        <td><%= project.client %></td>
+        <td><%= project.location %></td>
+        <td><%= project.team_size %></td>
+        <td><%= project.start_date %></td>
+        <td><%= project.end_date %></td>
+        <td><%= project.cost %></td>
+        <td><%= link_to ('<i class= "far fa-eye"></i>').html_safe, project ,class: "btn btn-secondary btn-sm" %></td>
+        <td><%= link_to ('<i class= "fas fa-edit"></i>').html_safe, edit_project_path(project),class: "btn btn-info btn-sm" %></td>
+        <td><%= link_to ('<i class= "fas fa-trash"></i>').html_safe,project, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+  </div>

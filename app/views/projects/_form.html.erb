@@ -1,0 +1,101 @@
+
+
+<%= bootstrap_form_with(model: project, local: true) do |form| %>
+  <% if project.errors.any? %>
+      <div class="alert alert-danger",style= "width: 5px;">
+      <h6><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h6>
+
+      <ul>
+      <% project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <div class = "main">
+  <div class="container",width=10px">
+   <div class="container-fluid" width=10px">
+     <br>
+   <form role="form" action="/projects" accept-charset="UTF-8" method="post",style= "left: 5px" >
+
+       <div class="form-row">
+         <div class="form-group col-md-4">
+         <div class="field">
+           <div class="form-group row">
+           <%= form.label :project_name,class: :"col-sm-4 col-form-label" %>
+           <%= form.text_field :project_name, id: :project_project_name,class: :"form-control ",hide_label: true %>
+           </div>
+          </div>
+          </div>
+
+            <div class="form-group col-md-4">
+             <div class="field">
+               <div class="form-group row">
+                 <%= form.label :client,class: :"col-sm-4 col-form-label" %>
+                <%= form.text_field :client, id: :project_client,class: :"form-control ",hide_label: true %>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-4">
+       <div class="field">
+         <div class="form-group row">
+        <%= form.label :location,class: :"col-sm-4 col-form-label" %>
+        <%= form.text_field :location, id: :project_location,class: :"form-control ",hide_label: true %>
+      </div>
+    </div>
+    </div>
+
+        <div class="form-group col-md-4">
+          <div class="field">
+            <div class="form-group row">
+             <%= form.label :team_size,class: :"col-sm-4 col-form-label" %>
+              <%= form.number_field :team_size, id: :project_team_size,class: :"form-control ",hide_label: true %>
+         </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-4">
+       <div class="field">
+         <div class="form-group row">
+        <%= form.label :start_date,class: :"col-sm-4 col-form-label"  %>
+          <%= form.text_field :start_date, id: :project_start_date,class: :"form-control ",hide_label: true %>
+      </div>
+    </div>
+</div>
+      <div class="form-group col-md-4">
+        <div class="field">
+          <div class="form-group row">
+          <%= form.label :end_date,class: :"col-sm-4 col-form-label"  %>
+          <%= form.text_field :end_date, id: :project_end_date,class: :"form-control ",hide_label: true %>
+      </div>
+  </div>
+  </div>
+  </div>
+  <div class="form-row">
+  <div class="form-group col-md-4">
+  <div class="field">
+    <div class="form-group row">
+    <%= form.label :cost,class: :"col-sm-4 col-form-label"   %>
+    <%= form.text_field :cost , id: :project_cost,class: :"form-control ",hide_label: true  %>
+  </div>
+</div>
+</div>
+<br>
+  <div class="right-box"><br><br><br><br>
+<div class="actions", style= "margin-left: -55px;">
+    <%= form.submit  class: "btn btn-info btn-sm"%>
+    <%= link_to "Back", projects_path,  class: "btn btn-secondary btn-sm", style: "margin-left: 10px;" %>
+
+  </div>
+</div>
+</form>
+</div>
+</div>
+</div>
+
+<% end %>

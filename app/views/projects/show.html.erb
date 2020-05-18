@@ -1,0 +1,53 @@
+<div class="container" >
+
+<br>
+  <p id="notice"><%= notice %></p>
+<center><h6>Employee Detail</h6></center>
+<br>
+
+<div class ="container" , style= "margin-left : 120px;" >
+      <table class="table table-borderedless",style= "width: 50px;">
+
+    <tbody>
+
+
+<tr>
+  <th>Project name:</th>
+  <td><%= @project.project_name %></td>
+
+ </tr>
+<tr>
+  <th>Client:</th>
+  <td><%= @project.client %></td>
+
+</tr>
+<tr>
+  <th>Location:</th>
+  <td><%= @project.location %></td>
+</tr>
+
+<tr>
+  <th>Team size:</th>
+  <td><%= @project.team_size %></td>
+</tr>
+
+<tr>
+  <th>Start date:</th>
+  <td><%= @project.start_date %></td>
+</tr>
+
+<tr>
+  <th>End date:</th>
+  <td><%= @project.end_date %></td>
+</tr>
+
+<tr>
+  <th>Cost:</th>
+  <td><%= @project.cost %></td>
+</tr>
+</tbody>
+
+</table>
+<%= link_to 'Edit', edit_project_path(@project), class: "btn btn-info btn-sm" %>
+<%= link_to 'Back', projects_path, class: "btn btn-secondary btn-sm", style: "margin-left: 20px;" %></div>
+</div>

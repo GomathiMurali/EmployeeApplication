@@ -1,5 +1,5 @@
 body {
-  background-color: #fafafa;
+  background-color: #fff;
   color: #333;
   margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
@@ -27,8 +27,8 @@ a {
   }
 
   &:hover {
-    color: #4ECDC4;
-    //background-color: #000;
+    color: #fff;
+    background-color: #000;
   }
 }
 
@@ -48,18 +48,17 @@ div {
 
 #notice {
   color: green;
-  display: table;
 }
 
 .field_with_errors {
   padding: 2px;
-  //background-color: red;
+  background-color: red;
   display: table;
 }
 
 #error_explanation {
   width: 450px;
-  //border: 2px solid red;
+  border: 2px solid red;
   padding: 7px 7px 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
@@ -71,7 +70,7 @@ div {
     font-size: 12px;
     margin: -7px -7px 0;
     background-color: #c00;
-    color: #fafafa;
+    color: #fff;
   }
 
   ul li {

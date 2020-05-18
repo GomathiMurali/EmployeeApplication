@@ -9,7 +9,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -34,15 +34,24 @@
 
   </div>
 
+
       <div class="wrapper">
       <!-- Sidebar -->
       <nav id="sidebar">
 
           <ul class="list-unstyled components">
+
                   <li class="active">
-                  <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Employee</a>
+
+                  <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" >Employee</a>
                   <ul class="collapse list-unstyled" id="homeSubmenu">
+
                     <li>
+
+                     <%= link_to "Dashboard", dashboards_path %>
+                     </li>
+
+                     <li>
                       <%= link_to "Employee List", employees_path %>
                       </li>
 
@@ -50,10 +59,16 @@
                           <%= link_to "Create Employee", new_employee_path %>
                       </li>
 
+                      <li>
+                          <%= link_to "Project List", projects_path %>
+                      </li>
+                      <li>
+                          <%= link_to "Create Project", new_project_path %>
+                      </li>
                   </ul>
               </li>
              <br>
-            
+
           </ul>
       </nav>
 
@@ -72,6 +87,7 @@
 
 </html>
 <script>
+
 $(document).ready(function () {
 
     $('#sidebarCollapse').on('click', function () {
@@ -79,4 +95,8 @@ $(document).ready(function () {
     });
 
 });
+
+
+
+
 </script>
