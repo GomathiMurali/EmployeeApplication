@@ -13,7 +13,7 @@ gem 'rails', '~> 5.1.7'
 group :development, :test do # <<<< :development, not devlopment
   gem 'sqlite3'
 end
-
+gem 'chartkick'
 group :production do
   gem 'pg', '1.1.4'
 end

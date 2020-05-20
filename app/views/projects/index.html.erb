@@ -1,13 +1,11 @@
 <div class="container">
-  <br>
-  <p id="notice"><%= notice %></p>
 
+    <b><p id="notice"><%= notice %></p></b>
   <div class="page-header">
-  <center>  <h6>Project Details</h6></center>
+  <center>  <h6><b>Project Details</b></h6></center>
 </div>
 
 <div class="container",style= "width:100px;">
-  <br>
 <table class="table table-bordered-sm">
 
    <thead class="table-secondary">
@@ -28,7 +26,7 @@
 
   <tbody>
     <% @projects.each do |project| %>
-      <tr>
+      <tr align="center">
         <td><%= project.project_name %></td>
         <td><%= project.client %></td>
         <td><%= project.location %></td>

@@ -11,15 +11,15 @@
     </div>
   <% end %>
  <div class = "w-75 p-3">
- <div class="container">
-  <div class="container-fluid", style= "margin-left:200px">
+ <div class="container",style color= "white" >
+  <div class="container-fluid", style= "margin-left:150px">
 <br>
-  <form role="form" action="/employees" accept-charset="UTF-8" method="post" >
+  <form role="form" action="/employees" accept-charset="UTF-8" method="post"  >
   <div class="field">
     <div class="form-group row">
 
-    <%= form.label :employee_name,class: :"col-sm-2 col-form-label" %>
-    <div class="col-sm-3">
+    <%= form.label :employee_name,class: :"col-sm-3 col-form-label" %>
+    <div class="col-sm-4">
     <%= form.text_field :employee_name, id: :employee_employee_name,class: :"form-control ",hide_label: true %>
     </div>
   </div>
@@ -27,8 +27,8 @@
   <div class="field">
 <div class="form-group row">
 
-      <%= form.label :age,class: :"col-sm-2 col-form-label" %>
-      <div class="col-sm-3">
+      <%= form.label :age,class: :"col-sm-3 col-form-label" %>
+      <div class="col-sm-4">
     <%= form.number_field :age, id: :employee_age,class: :"form-control ",hide_label: true  %>
     </div>
   </div>
@@ -36,8 +36,8 @@
 <div class="field">
 <div class="form-group row">
 
-    <%= form.label :gender,class: :"col-sm-2 col-form-label" %>
-    <div class="col-sm-3">
+    <%= form.label :gender,class: :"col-sm-3 col-form-label" %>
+    <div class="col-sm-4">
         <div class="form-check form-check-inline">
 
     &nbsp&nbsp<%= form.radio_button 'gender','Male' %>
@@ -48,8 +48,8 @@
 </div>
   <div class="field">
 <div class="form-group row">
-      <%= form.label :desgination,class: :"col-sm-2 col-form-label" %>
-    <div class="col-sm-3">
+      <%= form.label :desgination,class: :"col-sm-3 col-form-label" %>
+    <div class="col-sm-4">
     <%= form.text_field :desgination, id: :employee_desgination,class: :"form-control " ,hide_label: true %>
     </div>
   </div>

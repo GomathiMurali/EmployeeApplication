@@ -1,12 +1,10 @@
 <div class="container" >
 
-<br>
-  <p id="notice"><%= notice %></p>
-<center><h6>Employee Detail</h6></center>
-<br>
-
-<div class ="container" , style= "margin-left : 120px;" >
-      <table class="table table-borderedless",style= "width: 50px;">
+  <b><p id="notice"><%= notice %></p></b>
+<center><h6><b>Project Detail</b></h6></center>
+<div class = "w-50 p-3">
+<div class ="container" , style= "margin-left : 255px;" >
+      <table class="table table-borderedless">
 
     <tbody>
 
@@ -48,6 +46,7 @@
 </tbody>
 
 </table>
-<%= link_to 'Edit', edit_project_path(@project), class: "btn btn-info btn-sm" %>
-<%= link_to 'Back', projects_path, class: "btn btn-secondary btn-sm", style: "margin-left: 20px;" %></div>
+<%= link_to 'Edit', edit_project_path(@project), class: "btn btn-info btn-sm",style: "font-weight: bold; margin-left: 150px" %>
+<%= link_to 'Back', projects_path, class: "btn btn-secondary btn-sm",style: "margin-left: 25px; font-weight: bold;"%></div>
+</div>
 </div>

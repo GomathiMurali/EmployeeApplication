@@ -12,10 +12,21 @@
  *
  *= require_tree .
  *= require_self
+
  */
- @import "bootstrap";
+
+@import "bootstrap";
 @import "rails_bootstrap_forms";
 
+.table th, .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #fafafa;
+}
+.table table-bordered-sm{
+  padding: 0.75rem;
+  border-radius: 10px;
+}
 
 div.top-menu  {
     color: #fff;
@@ -33,11 +44,12 @@ div.top-menu  {
 
 body {
     color: #797979;
-    background: #fafafa;
+    background: #eaeaea;
     font-family: 'Ruda', sans-serif;
     padding: 0px !important;
     margin: 0px !important;
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: bold;
 }
 span
 {
@@ -81,7 +93,7 @@ div .left-box{
   }
 
 
-.card-body
+.card-emp, .card-proj
 {
   cursor: pointer;
 }
@@ -138,3 +150,15 @@ div .left-box{
       border: 1px solid #e3e6f0;
       border-radius: .35rem;
   }
+.container{
+    background-color: white;
+}
+.myPieChart
+{
+  margin-bottom: 40px;
+}
+.card-area {
+    display: block;
+    width: 100px;
+    height: 50px;
+}
