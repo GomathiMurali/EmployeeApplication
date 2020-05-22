@@ -20,7 +20,7 @@
       <div class="form-group row">
     <%= form.label :project_name ,class: :"col-sm-3 col-form-label" %>
         <div class="col-sm-4">
-    <%= form.text_field :project_name, id: :task_project_name,class: :"form-control ",hide_label: true %>
+    <%= form.select :project_name, options_for_select(@projects.collect{|e|["#{e.project_name}", e.project_name]},:selected => form.object.project_name),{prompt: "Select"},{class: "form-control", id: "project_project_name"} %>
   </div>
 </div>
 </div>
@@ -35,7 +35,6 @@
 </div>
 <div class="field">
 <div class="form-group row">
-
     <%= form.label :description,class: :"col-sm-3 col-form-label" %>
     <div class="col-sm-4">
     <%= form.text_field :description, id: :task_description,class: :"form-control ",hide_label: true   %>
@@ -44,19 +43,17 @@
 </div>
 <div class="field">
 <div class="form-group row">
-
     <%= form.label :estimate_hours,class: :"col-sm-3 col-form-label" %>
       <div class="col-sm-4">
-    <%= form.text_field :estimate_hours, id: :task_estimate_hours,class: :"form-control ",hide_label: true   %>
+    <%= form.number_field :estimate_hours, id: :task_estimate_hours,class: :"form-control ",hide_label: true   %>
   </div>
   </div>
 </div>
 <div class="field">
 <div class="form-group row">
-
     <%= form.label :employee_name ,class: :"col-sm-3 col-form-label"%>
       <div class="col-sm-4">
-    <%= form.text_field :employee_name, id: :task_employee_name,class: :"form-control ",hide_label: true %>
+        <%= form.select :employee_name, options_for_select(@employees.collect{|e|["#{e.employee_name}", e.employee_name]},:selected => form.object.employee_name),{prompt: "Select"},{class: "form-control", id: "task_employee_name"} %>
   </div>
 </div>
 </div>

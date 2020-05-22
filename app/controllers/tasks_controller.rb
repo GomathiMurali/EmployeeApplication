@@ -4,7 +4,7 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all
+    @tasks = Task.search(params[:search])
   end
 
   # GET /tasks/1
@@ -15,17 +15,22 @@ class TasksController < ApplicationController
   # GET /tasks/new
   def new
     @task = Task.new
+    @projects = Project.all
+    @employees = Employee.all
   end
 
   # GET /tasks/1/edit
   def edit
+    @projects = Project.all
+    @employees = Employee.all
   end
 
   # POST /tasks
   # POST /tasks.json
   def create
+    @projects = Project.all
+    @employees = Employee.all
     @task = Task.new(task_params)
-
     respond_to do |format|
       if @task.save
         format.html { redirect_to @task, notice: 'Task was successfully created.' }
@@ -40,6 +45,8 @@ class TasksController < ApplicationController
   # PATCH/PUT /tasks/1
   # PATCH/PUT /tasks/1.json
   def update
+    @projects = Project.all
+    @employees = Employee.all
     respond_to do |format|
       if @task.update(task_params)
         format.html { redirect_to @task, notice: 'Task was successfully updated.' }

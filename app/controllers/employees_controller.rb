@@ -19,6 +19,7 @@ class EmployeesController < ApplicationController
 
   # GET /employees/1/edit
   def edit
+    @projects = Project.all
   end
 
   # POST /employees
@@ -40,6 +41,7 @@ class EmployeesController < ApplicationController
   # PATCH/PUT /employees/1
   # PATCH/PUT /employees/1.json
   def update
+    @projects = Project.all
     respond_to do |format|
       if @employee.update(employee_params)
         format.html { redirect_to @employee, notice: 'Employee was successfully updated.' }

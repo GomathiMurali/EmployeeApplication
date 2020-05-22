@@ -7,5 +7,12 @@ class Project < ApplicationRecord
   validates :end_date, presence: true
   validates :location, presence: true
   validates :cost, presence: true
- 
-end
+  def self.search(search)
+      if search.blank?  # blank? covers both nil and empty string
+        all
+      else
+        where('project_name LIKE ?', "%#{search}%")
+      end
+    end
+
+ end

@@ -183,7 +183,7 @@
                   <div class="chart-area">
 
                     <%= column_chart [
-{
+              {
                name:'Projects',color: "#gray",library: {backgroundColor: "#4ECDC4", height: 265} ,data: @employee_list.map {
                      |t| [t.project_name, t.team_size]
 
@@ -209,7 +209,12 @@
                 <div class="card-body">
                   <div class="chart-pie pt-2 pb-2">
 
-                          <%= pie_chart [["employee_name",5],["email_id",15],["age",15],["gender",15],["desgination",15],["project_name",15]],colors: [ '#4ECDC4', '#1cc88a','#4e73df','#091E42','	#000080','#008080'] %>
+
+                    <% data =  @employee_list.map {
+                      |t| [t.project_name, t.team_size]
+                    }
+                    %>
+                          <%= pie_chart data %>
                     </div>
                     </div>
               </div>

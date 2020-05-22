@@ -1,7 +1,7 @@
 <div class="container">
     <b><p id="notice"><%= notice %></p></b>
   <div class="page-header">
-  <center>  <h6><b>Task</b></h6></center>
+  <center>  <h6><b>Task list</b></h6></center>
 </div>
 
 <div class="container",style= "width:100px;">
@@ -23,7 +23,7 @@
 
   <tbody>
     <% @tasks.each do |task| %>
-      <tr>
+        <tr align="center">
         <td><%= task.project_name %></td>
         <td><%= task.task_name %></td>
         <td><%= task.description %></td>
