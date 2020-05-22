@@ -51,6 +51,10 @@ body {
     font-size: 14px;
     font-weight: bold;
 }
+.container-fluid {
+    width: 100%;//
+  //padding-right:  10px;
+}
 span
 {
   color:#4ECDC4;
@@ -156,9 +160,4 @@ div .left-box{
 .myPieChart
 {
   margin-bottom: 40px;
-}
-.card-area {
-    display: block;
-    width: 100px;
-    height: 50px;
 }

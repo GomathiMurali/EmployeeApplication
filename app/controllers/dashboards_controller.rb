@@ -7,6 +7,8 @@ class DashboardsController < ApplicationController
     @dashboards = Dashboard.all
     @total_employees= Employee.count
     @total_projects= Project.count
+    @employee_list = Project.all
+
   end
 
 

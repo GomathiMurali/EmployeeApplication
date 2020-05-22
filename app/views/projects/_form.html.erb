@@ -1,5 +1,6 @@
 <%= bootstrap_form_with(model: project, local: true) do |form| %>
   <% if project.errors.any? %>
+   <div class = "w-75 p-3">
       <div class="alert alert-danger",style= "width: 5px;">
       <h6><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h6>
 
@@ -9,10 +10,11 @@
       <% end %>
       </ul>
     </div>
+    </div>
   <% end %>
  <div class = "w-75 p-3">
   <div class="container  " >
-   <div class="container-fluid" , style= "margin-left:25px">
+   <div class="container-fluid" >
      <br>
      <div class="box">
    <form role="form" action="/projects" accept-charset="UTF-8" method="post" >
@@ -86,7 +88,7 @@
 </div>
 
   <div class="right-box"><br><br><br>
-<div class="actions", style= "margin-left: -95px;">
+<div class="actions", style= "margin-left: -120px;">
     <%= form.submit  class: "btn btn-info btn-sm", style: "font-weight: bold;"%>
     <%= link_to "Back", projects_path,  class: "btn btn-secondary btn-sm", style: "margin-left: 10px;font-weight: bold;" %>
 

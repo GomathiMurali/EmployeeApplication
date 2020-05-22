@@ -1,6 +1,6 @@
 class EmployeesController < ApplicationController
   before_action :set_employee, only: [:show, :edit, :update, :destroy]
-  
+
   # GET /employees
   # GET /employees.json
   def index
@@ -14,6 +14,7 @@ class EmployeesController < ApplicationController
   # GET /employees/new
   def new
     @employee = Employee.new
+    @projects = Project.all
   end
 
   # GET /employees/1/edit
@@ -24,7 +25,7 @@ class EmployeesController < ApplicationController
   # POST /employees.json
   def create
     @employee = Employee.new(employee_params)
-
+    @projects = Project.all
     respond_to do |format|
       if @employee.save
         format.html { redirect_to @employee, notice: 'Employee was successfully created.' }
@@ -55,6 +56,7 @@ class EmployeesController < ApplicationController
   def destroy
     @employee.destroy
     respond_to do |format|
+
       format.html { redirect_to employees_url, notice: 'Employee was successfully destroyed.' }
       format.json { head :no_content }
     end
@@ -68,6 +70,6 @@ class EmployeesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def employee_params
-      params.require(:employee).permit(:employee_name, :age, :gender, :desgination, :search)
+      params.require(:employee).permit(:employee_name, :email_id, :age, :gender, :desgination,:project_name, :search)
     end
 end

@@ -17,6 +17,7 @@
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -171,18 +172,27 @@
 
             <!-- Area Chart -->
             <div class="col-xl-8 col-lg-7">
-              <div class="card shadow mb-4">
+              <div class="card shadow mb-6">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Projects Overview</h6>
 
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
                   <div class="chart-area">
-                    
-                    <canvas id="mybarChart" ></canvas>
-                    <%= column_chart [["employee_name",5],["age",5],["gender",15],["designation",5]] %>
+
+                    <%= column_chart [
+{
+               name:'Projects',color: "#gray",library: {backgroundColor: "#4ECDC4", height: 265} ,data: @employee_list.map {
+                     |t| [t.project_name, t.team_size]
+
+             },
+
+           }
+         ] %>
+
+        
                   </div>
                 </div>
               </div>
@@ -198,8 +208,8 @@
                 <!-- Card Body -->
                 <div class="card-body">
                   <div class="chart-pie pt-2 pb-2">
-                    <canvas id="myPieChart"></canvas>
-                          <%= pie_chart [["employee_name",5],["gender",15]] %>
+
+                          <%= pie_chart [["employee_name",5],["email_id",15],["age",15],["gender",15],["desgination",15],["project_name",15]],colors: [ '#4ECDC4', '#1cc88a','#4e73df','#091E42','	#000080','#008080'] %>
                     </div>
                     </div>
               </div>

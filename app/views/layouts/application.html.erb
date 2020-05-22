@@ -27,7 +27,7 @@
               <div class="form-inline float-sm-right">
                <%= text_field_tag :search, params[:search],class: :"form-control form-control-sm"%>
                 &nbsp&nbsp<div class="top-menu">
-                 <%= submit_tag 'Search', :employee_name => nil,name: "Search",class: "btn btn-blue btn-sm"  %>
+              <%= submit_tag 'Search', :employee_name => nil,name: "Search",class: "btn btn-blue btn-sm",style: "font-weight: bold;" %>
                 <% end %></div</div>
           </div>
       </nav>
@@ -50,6 +50,12 @@
 
                      <%= link_to "Dashboard", dashboards_path, style:"font-size:36px;"%>
                      </li>
+                     <li>
+                         <%= link_to "Add Project", new_project_path,style:"font-size:36px;" %>
+                     </li>
+                     <li>
+                         <%= link_to "Projects List", projects_path,style:"font-size:36px;" %>
+                     </li>
 
                       <li>
                           <%= link_to "Add Employee", new_employee_path,style:"font-size:36px;"%>
@@ -59,12 +65,7 @@
                        <%= link_to "Employees List", employees_path,style:"font-size:36px;" %>
                        </li>
 
-                      <li>
-                          <%= link_to "Add Project", new_project_path,style:"font-size:36px;" %>
-                      </li>
-                      <li>
-                          <%= link_to "Projects List", projects_path,style:"font-size:36px;" %>
-                      </li>
+                    
                   </ul>
               </li>
              <br>
