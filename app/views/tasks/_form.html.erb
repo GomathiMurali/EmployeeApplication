@@ -1,0 +1,72 @@
+<%= bootstrap_form_with(model: task, local: true) do |form| %>
+  <% if task.errors.any? %>
+    <div class="alert alert-danger",style= "width: 20px;">
+      <h6><%= pluralize(task.errors.count, "error") %> prohibited this employee from being saved:</h6>
+
+      <ul>
+      <% task.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <div class = "w-75 p-3">
+  <div class="container">
+    <div class="container-fluid" , style= "margin-left:25px" >
+      <br>
+      <div class="box">
+    <form role="form" action="/tasks" accept-charset="UTF-8" method="post">
+    <div class="field">
+      <div class="form-group row">
+    <%= form.label :project_name ,class: :"col-sm-3 col-form-label" %>
+        <div class="col-sm-4">
+    <%= form.text_field :project_name, id: :task_project_name,class: :"form-control ",hide_label: true %>
+  </div>
+</div>
+</div>
+<div class="field">
+<div class="form-group row">
+
+    <%= form.label :task_name,class: :"col-sm-3 col-form-label" %>
+        <div class="col-sm-4">
+    <%= form.text_field :task_name, id: :task_task_name,class: :"form-control ",hide_label: true  %>
+  </div>
+  </div>
+</div>
+<div class="field">
+<div class="form-group row">
+
+    <%= form.label :description,class: :"col-sm-3 col-form-label" %>
+    <div class="col-sm-4">
+    <%= form.text_field :description, id: :task_description,class: :"form-control ",hide_label: true   %>
+  </div>
+</div>
+</div>
+<div class="field">
+<div class="form-group row">
+
+    <%= form.label :estimate_hours,class: :"col-sm-3 col-form-label" %>
+      <div class="col-sm-4">
+    <%= form.text_field :estimate_hours, id: :task_estimate_hours,class: :"form-control ",hide_label: true   %>
+  </div>
+  </div>
+</div>
+<div class="field">
+<div class="form-group row">
+
+    <%= form.label :employee_name ,class: :"col-sm-3 col-form-label"%>
+      <div class="col-sm-4">
+    <%= form.text_field :employee_name, id: :task_employee_name,class: :"form-control ",hide_label: true %>
+  </div>
+</div>
+</div>
+<div class="actions", style= "margin-left : 220px;">
+  <%= form.submit  class: "btn btn-info btn-sm",  style: "font-weight: bold;"%>
+  <%= link_to "Back", tasks_path,  class: "btn btn-secondary btn-sm", style: "margin-left: 20px; font-weight: bold;" %>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<% end %>

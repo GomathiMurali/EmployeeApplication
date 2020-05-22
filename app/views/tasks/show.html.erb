@@ -1,0 +1,40 @@
+<div class="container" >
+
+  <b><p id="notice"><%= notice %></p></b>
+<center><h6><b>Project Detail</b></h6></center>
+<div class = "w-50 p-3">
+<div class ="container" , style= "margin-left : 255px;" >
+      <table class="table table-borderedless">
+
+    <tbody>
+  <tr>
+      <th>Project name:</th>
+      <td><%= @task.project_name %></td>
+</tr>
+
+<tr>
+  <th>Task name:</th>
+  <td><%= @task.task_name %></td>
+</tr>
+
+<tr>
+  <th>Description:</th>
+<td>  <%= @task.description %></td>
+</tr>
+
+<tr>
+  <th>Estimate hours:</th>
+  <td><%= @task.estimate_hours %></td>
+</tr>
+
+<tr>
+  <th>Employee name:</th>
+  <td><%= @task.employee_name %></td>
+</tr>
+</tbody>
+
+</table>
+<%= link_to 'Edit', edit_project_path(@task), class: "btn btn-info btn-sm",style: "font-weight: bold; margin-left: 150px" %>
+<%= link_to 'Back', tasks_path, class: "btn btn-secondary btn-sm",style: "margin-left: 25px; font-weight: bold;"%></div>
+</div>
+</div>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_name: MyString
+  task_name: MyString
+  description: MyString
+  estimate_hours: MyString
+  employee_name: MyString
+
+two:
+  project_name: MyString
+  task_name: MyString
+  description: MyString
+  estimate_hours: MyString
+  employee_name: MyString
