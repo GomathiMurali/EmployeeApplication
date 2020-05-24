@@ -73,6 +73,7 @@
   <div class="form-group row">
     <%= form.label :project_name,class: :"col-sm-5 col-form-label" %>
     <%= form.select :project_name, options_for_select(@projects.collect{|e|["#{e.project_name}", e.project_name]},:selected => form.object.project_name),{prompt: "Select"},{class: "form-control", id: "project_project_name"} %>
+    
   </div>
   </div>
 </div>

@@ -91,6 +91,9 @@ ul ul a  {
 a[data-toggle="collapse"] {
     position: relative;
 }
+a[data-toggle="dropdown"] {
+    position: relative;
+}
 
 .dropdown-toggle::after {
     display: block;
