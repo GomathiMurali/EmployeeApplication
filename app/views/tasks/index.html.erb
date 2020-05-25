@@ -30,7 +30,7 @@
         <td><%= task.estimate_hours %></td>
         <td><%= task.employee_name %></td>
         <td><%= link_to ('<i class= "far fa-eye"></i>').html_safe, task ,class: "btn btn-secondary btn-sm" %></td>
-        <td><%= link_to ('<i class= "fas fa-edit"></i>').html_safe, edit_project_path(task),class: "btn btn-info btn-sm" %></td>
+        <td><%= link_to ('<i class= "fas fa-edit"></i>').html_safe, edit_task_path(task),class: "btn btn-info btn-sm" %></td>
         <td><%= link_to ('<i class= "fas fa-trash"></i>').html_safe,task, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %></td>
       </tr>
     <% end %>

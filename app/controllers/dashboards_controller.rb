@@ -8,7 +8,8 @@ class DashboardsController < ApplicationController
     @total_employees= Employee.count
     @total_projects= Project.count
     @employee_list = Project.all
-
+     @task_count = Task.count
+     @project_cost= Project.sum(:cost)
   end
 
 
