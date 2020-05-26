@@ -1,14 +1,9 @@
 <div class="container" >
-
   <!-- Success Alert -->
-<div id="notice" class="alert alert-success alert-dismissible fade show">
-    <%= notice %>
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-</div>
 <br>
 <center><h6><b>Employee Detail</b></h6></center>
  <div class = "w-50 p-3">
-<div class ="container" , style= "margin-left : 255px;" >
+<div class ="container" , style= "margin-left : 255px; background:white" >
       <table class="table table-borderedless">
 
     <tbody>
@@ -47,8 +42,8 @@
   </table>
   <br>
 
-<%= link_to 'Edit', edit_employee_path(@employee), class: "btn btn-info btn-sm", style: "font-weight: bold; margin-left: 150px" %>
-<%= link_to 'Back', employees_path, class: "btn btn-secondary btn-sm", style: "margin-left: 25px; font-weight: bold;" %>
+<%= link_to 'Edit', edit_employee_path(@employee), class: "btn btn-info btn-sm", style: "font-weight: bold; margin-left: 190px; margin-bottom:20px; " %>
+<%= link_to 'Back', employees_path, class: "btn btn-secondary btn-sm", style: "margin-left: 25px; margin-bottom:20px; font-weight: bold;" %>
 </div>
 </div>
 </div>

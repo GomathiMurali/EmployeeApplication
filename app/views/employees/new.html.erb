@@ -1,11 +1,15 @@
-<br>
 
 <div class="container">
-<p id="notice"><%= notice %></p>
-
+  <br>
+  <% flash.each do |name, msg| %>
+  <center><div id="success" class="alert alert-success alert-dismissible fade show">
+      <%= msg %>
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+  </div></center>
+  <% end %>
     <center><h6><b>New Employee</b></h6></center>
-
 <div class ="container-fluid", style= "margin-left : 135px;">
 <%= render 'form', employee: @employee %>
 
+</div>
 </div>

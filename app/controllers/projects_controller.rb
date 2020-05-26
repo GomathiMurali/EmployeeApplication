@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+      @projects = Project.search(params[:search])
   end
 
   # GET /projects/1
@@ -19,35 +19,23 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1/edit
   def edit
+
   end
 
   # POST /projects
   # POST /projects.json
   def create
     @project = Project.new(project_params)
-
-    respond_to do |format|
       if @project.save
-        format.html { redirect_to @project, notice: 'Project was successfully created.' }
-        format.json { render :show, status: :created, location: @project }
-      else
-        format.html { render :new }
-        format.json { render json: @project.errors, status: :unprocessable_entity }
-      end
+         return redirect_to  new_project_path, success: 'Project was successfully created.'
     end
   end
 
   # PATCH/PUT /projects/1
   # PATCH/PUT /projects/1.json
   def update
-    respond_to do |format|
-      if @project.update(project_params)
-        format.html { redirect_to @project, notice: 'Project was successfully updated.' }
-        format.json { render :show, status: :ok, location: @project }
-      else
-        format.html { render :edit }
-        format.json { render json: @project.errors, status: :unprocessable_entity }
-      end
+        if @project.update(project_params)
+         return redirect_to  edit_project_path, success: 'Project was successfully updated.'
     end
   end
 
@@ -67,8 +55,9 @@ class ProjectsController < ApplicationController
       @project = Project.find(params[:id])
     end
 
+
     # Only allow a list of trusted parameters through.
     def project_params
-      params.require(:project).permit(:project_name, :client, :location, :team_size, :start_date, :end_date, :cost)
+      params.require(:project).permit(:project_name, :client, :location, :team_size, :start_date, :end_date, :cost, :search)
     end
 end

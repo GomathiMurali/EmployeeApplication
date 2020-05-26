@@ -27,14 +27,8 @@ class EmployeesController < ApplicationController
   def create
     @employee = Employee.new(employee_params)
     @projects = Project.all
-    respond_to do |format|
-      if @employee.save
-        format.html { redirect_to @employee, notice: 'Employee was successfully created.' }
-        format.json { render :show, status: :created, location: @employee }
-      else
-        format.html { render :new }
-        format.json { render json: @employee.errors, status: :unprocessable_entity }
-      end
+    if @employee.save
+       return redirect_to  new_employee_path, success: 'Employee was successfully created.'
     end
   end
 
@@ -42,17 +36,10 @@ class EmployeesController < ApplicationController
   # PATCH/PUT /employees/1.json
   def update
     @projects = Project.all
-    respond_to do |format|
-      if @employee.update(employee_params)
-        format.html { redirect_to @employee, notice: 'Employee was successfully updated.' }
-        format.json { render :show, status: :ok, location: @employee }
-      else
-        format.html { render :edit }
-        format.json { render json: @employee.errors, status: :unprocessable_entity }
-      end
-    end
+    if @employee.update(employee_params)
+     return redirect_to  edit_employee_path, success: 'Employee was successfully updated.'
   end
-
+end
   # DELETE /employees/1
   # DELETE /employees/1.json
   def destroy

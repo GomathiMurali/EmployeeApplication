@@ -1,16 +1,21 @@
 <div class="container">
+<br>
+  <% flash.each do |name, msg| %>
+  <center><div id="success" class="alert alert-danger alert-dismissible fade show" >
+      <%= msg %>
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+  </div></center>
 
-  <p id="notice"><%= notice %></p>
-
+  <% end %>
   <div class="page-header">
   <center>  <h6><b>Employee Details</b></h6></center>
 </div>
-
-<div class="container",style= "width:200px;">
+<br>
+<div class="container" style = "background:white">
 
 <table class="table table-bordered-sm">
 
-   <thead class="table-secondary">
+   <thead class="table-info">
     <tr align="center">
       <th>Employee Name</th>
       <th>Email-ID</th>

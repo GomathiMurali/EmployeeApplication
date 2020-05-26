@@ -3,7 +3,7 @@
 
 body {
     color: #797979;
-    background:#dbdce0;
+    background-color:  #f2f2f2;
     font-family: 'Ruda', sans-serif;
     padding: 0px !important;
     margin: 0px !important;
@@ -127,4 +127,7 @@ a[data-toggle="dropdown"] {
 }
 .hidden{
   display: none;
+}
+.w-75 p-3{
+  background-color:  #fff;
 }

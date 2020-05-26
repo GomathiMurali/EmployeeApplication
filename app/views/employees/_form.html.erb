@@ -5,7 +5,7 @@
       <h6><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h6>
 
       <ul>
-        
+
       <% employee.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
@@ -14,7 +14,7 @@
     </div>
   <% end %>
  <div class = "w-75 p-3">
- <div class="container">
+ <div class="container" style = "background:white">
   <div class="container-fluid", style= "margin-left:4px">
 <br>
 <div class="box">
@@ -24,7 +24,7 @@
       <div class="field">
         <div class="form-group row">
        <%= form.label :employee_name,class: :"col-sm-5 col-form-label" %>
-        <%= form.text_field :employee_name, id: :employee_employee_name,class: :"form-control ",hide_label: true %>
+        <%= form.text_field :employee_name, id: :employee_employee_name,class: :"form-control ",hide_label: true , :required => true%>
       </div>
     </div>
  </div>
@@ -33,7 +33,7 @@
   <div class="field">
     <div class="form-group row">
       <%= form.label :email_id,class: :"col-sm-5 col-form-label" %>
-      <%= form.text_field :email_id, id: :employee_email_id,class: :"form-control ",hide_label: true  %>
+      <%= form.text_field :email_id, id: :employee_email_id,class: :"form-control ",hide_label: true, :required => true  %>
     </div>
   </div>
 </div>
@@ -44,7 +44,7 @@
   <div class="field">
     <div class="form-group row">
       <%= form.label :age,class: :"col-sm-5 col-form-label" %>
-      <%= form.number_field :age, id: :employee_age,class: :"form-control ",hide_label: true  %>
+      <%= form.number_field :age, id: :employee_age,class: :"form-control ",hide_label: true, :required => true  %>
     </div>
   </div>
 </div>
@@ -53,8 +53,8 @@
    <div class="form-group row">
     <%= form.label :gender,class: :"col-sm-5 col-form-label" %>
         <div class="form-check form-check-inline">
-    &nbsp&nbsp<%= form.radio_button 'gender','Male' %>
-      <%= form.radio_button 'gender','Female' %>
+    &nbsp&nbsp<%= form.radio_button 'gender','Male', :required => true %>
+      <%= form.radio_button 'gender','Female' , :required => true%>
         </div>
   </div>
   </div>
@@ -65,7 +65,7 @@
   <div class="field">
     <div class="form-group row">
       <%= form.label :desgination,class: :"col-sm-5 col-form-label" %>
-      <%= form.text_field :desgination, id: :employee_desgination,class: :"form-control " ,hide_label: true %>
+      <%= form.text_field :desgination, id: :employee_desgination,class: :"form-control " ,hide_label: true , :required => true%>
     </div>
   </div>
 </div>
@@ -73,15 +73,15 @@
 <div class="field">
   <div class="form-group row">
     <%= form.label :project_name,class: :"col-sm-5 col-form-label" %>
-    <%= form.select :project_name, options_for_select(@projects.collect{|e|["#{e.project_name}", e.project_name]},:selected => form.object.project_name),{prompt: "Select"},{class: "form-control", id: "project_project_name"} %>
+    <%= form.select :project_name, options_for_select(@projects.collect{|e|["#{e.project_name}", e.project_name]},:selected => form.object.project_name),{prompt: "Select", hide_label: true, :required => true} %>
 
   </div>
   </div>
 </div>
 </div>
 <div class="actions", style= "margin-left : 220px;">
-    <%= form.submit  class: "btn btn-info btn-sm",  style: "font-weight: bold;"%>
-    <%= link_to "Back", employees_path,  class: "btn btn-secondary btn-sm", style: "margin-left: 20px; font-weight: bold;" %>
+    <%= form.submit  class: "btn btn-info btn-sm",  style: "font-weight: bold; margin-bottom:10px"%>
+    <%= link_to "Back", employees_path,  class: "btn btn-secondary btn-sm", style: "margin-left: 20px; margin-bottom:10px; font-weight: bold;" %>
 
   </div>
 </form>

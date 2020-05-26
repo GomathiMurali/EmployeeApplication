@@ -18,7 +18,13 @@
 @import "bootstrap";
 @import "rails_bootstrap_forms";
 
+.alert {
+   width:40%;
 
+}
+.table-info{
+  background-color: #4ECDC4;
+}
 
 .table th, .table td {
     padding: 0.75rem;
@@ -45,17 +51,17 @@ div.top-menu  {
 
 
 body {
-    color: black;
-    background: #eaeaea;
-    font-family: 'Ruda', sans-serif;
+    color: #6c757d;
+    background-color:  #f2f2f2;
+
     padding: 0px !important;
     margin: 0px !important;
     font-size: 14px;
     font-weight: bold;
 }
 .container-fluid {
-    width: 100%;//
-  //padding-right:  10px;
+    width: 100%;
+      //padding-right:  10px;
 }
 span
 {
@@ -72,7 +78,7 @@ div .left-box{
     color: #fff;
     background-color: #4ECDC4;;
     border-color: #4ECDC4;
-
+    cursor: pointer;
     &:visited {
       color: #fff;
     }
@@ -157,9 +163,7 @@ div .left-box{
       border: 1px solid #e3e6f0;
       border-radius: .35rem;
   }
-.container{
-    background-color: white;
-}
+
 .myPieChart
 {
   margin-bottom: 40px;

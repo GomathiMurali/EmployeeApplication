@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem "bootstrap_form", "~> 4.0"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.7'
+gem 'money'
 # Use sqlite3 as the database for Active Record
 group :development, :test do # <<<< :development, not devlopment
   gem 'sqlite3'

@@ -11,7 +11,7 @@
     </div>
   <% end %>
  <div class = "w-75 p-3">
-  <div class="container">
+  <div class="container" style = "background:white">
     <div class="container-fluid" , style= "margin-left:25px" >
       <br>
       <div class="box">
@@ -20,7 +20,7 @@
       <div class="form-group row">
     <%= form.label :project_name ,class: :"col-sm-3 col-form-label" %>
         <div class="col-sm-4">
-    <%= form.select :project_name, options_for_select(@projects.collect{|e|["#{e.project_name}", e.project_name]},:selected => form.object.project_name),{prompt: "Select"},{class: "form-control", id: "project_project_name"} %>
+    <%= form.select :project_name, options_for_select(@projects.collect{|e|["#{e.project_name}", e.project_name]},:selected => form.object.project_name),{prompt: "Select", hide_label: true},{class: "form-control", :required => true ,id: "project_project_name"} %>
   </div>
 </div>
 </div>
@@ -29,7 +29,7 @@
 
     <%= form.label :task_name,class: :"col-sm-3 col-form-label" %>
         <div class="col-sm-4">
-    <%= form.text_field :task_name, id: :task_task_name,class: :"form-control ",hide_label: true  %>
+    <%= form.text_field :task_name, id: :task_task_name,class: :"form-control ",hide_label: true , :required => true %>
   </div>
   </div>
 </div>
@@ -53,13 +53,13 @@
 <div class="form-group row">
     <%= form.label :employee_name ,class: :"col-sm-3 col-form-label"%>
       <div class="col-sm-4">
-        <%= form.select :employee_name, options_for_select(@employees.collect{|e|["#{e.employee_name}", e.employee_name]},:selected => form.object.employee_name),{prompt: "Select"},{class: "form-control", id: "task_employee_name"} %>
+        <%= form.select :employee_name, options_for_select(@employees.collect{|e|["#{e.employee_name}", e.employee_name]},:selected => form.object.employee_name),{prompt: "Select", hide_label: true},{class: "form-control",  :required => true,id: "task_employee_name"} %>
   </div>
 </div>
 </div>
 <div class="actions", style= "margin-left : 220px;">
-  <%= form.submit  class: "btn btn-info btn-sm",  style: "font-weight: bold;"%>
-  <%= link_to "Back", tasks_path,  class: "btn btn-secondary btn-sm", style: "margin-left: 20px; font-weight: bold;" %>
+  <%= form.submit  class: "btn btn-info btn-sm",  style: "font-weight: bold; margin-bottom:10px"%>
+  <%= link_to "Back", tasks_path,  class: "btn btn-secondary btn-sm", style: "margin-left: 20px; font-weight: bold; margin-bottom:10px" %>
 </div>
 </form>
 </div>

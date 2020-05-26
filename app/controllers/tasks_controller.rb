@@ -31,14 +31,8 @@ class TasksController < ApplicationController
     @projects = Project.all
     @employees = Employee.all
     @task = Task.new(task_params)
-    respond_to do |format|
-      if @task.save
-        format.html { redirect_to @task, notice: 'Task was successfully created.' }
-        format.json { render :show, status: :created, location: @task }
-      else
-        format.html { render :new }
-        format.json { render json: @task.errors, status: :unprocessable_entity }
-      end
+    if @task.save
+       return redirect_to  new_task_path, success: 'Task was successfully created.'
     end
   end
 
@@ -47,17 +41,10 @@ class TasksController < ApplicationController
   def update
     @projects = Project.all
     @employees = Employee.all
-    respond_to do |format|
-      if @task.update(task_params)
-        format.html { redirect_to @task, notice: 'Task was successfully updated.' }
-        format.json { render :show, status: :ok, location: @task }
-      else
-        format.html { render :edit }
-        format.json { render json: @task.errors, status: :unprocessable_entity }
-      end
-    end
+    if @task.update(task_params)
+     return redirect_to  edit_task_path, success: 'Task was successfully updated.'
   end
-
+end
   # DELETE /tasks/1
   # DELETE /tasks/1.json
   def destroy
