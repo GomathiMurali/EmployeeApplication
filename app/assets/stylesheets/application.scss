@@ -29,7 +29,7 @@
 .table th, .table td {
     padding: 0.75rem;
     vertical-align: top;
-    border-top: 1px solid #fafafa;
+    border-top: 2px solid #fafafa;
 }
 .table table-bordered-sm{
   padding: 0.75rem;
@@ -38,7 +38,7 @@
 
 div.top-menu  {
     color: #fff;
-    font-size: 10px;
+    font-size: 14px;
     border-radius: 4px;
     -webkit-border-radius: 4px;
     border: 1px solid #64c3c2 !important;
@@ -53,7 +53,6 @@ div.top-menu  {
 body {
     color: #6c757d;
     background-color:  #f2f2f2;
-
     padding: 0px !important;
     margin: 0px !important;
     font-size: 14px;
@@ -121,7 +120,7 @@ div .left-box{
       word-wrap: break-word;
       background-color: #fff;
       background-clip: border-box;
-      border: 1px solid rgba(0, 0, 0, 0.125);
+      border: 3px solid rgba(0, 0, 0, 0.125);
       border-radius: 0.25rem;
   }
 
@@ -149,7 +148,7 @@ div .left-box{
       word-wrap: break-word;
       background-color: #fff;
       background-clip: border-box;
-      border: 1px solid #e3e6f0;
+      border: 3px solid #e3e6f0;
       border-radius: .35rem;
   }
   .card {
@@ -160,7 +159,7 @@ div .left-box{
       word-wrap: break-word;
       background-color: #fff;
       background-clip: border-box;
-      border: 1px solid #e3e6f0;
+      border: 3px solid #e3e6f0;
       border-radius: .35rem;
   }
 
