@@ -189,3 +189,13 @@ div .left-box{
 .d-flex {
     display: flex!important;
 }
+#sidebar ul li a {
+    padding: 13px;
+    font-size: 15px;
+    display: block;
+}
+ul ul a {
+    font-size: 15px;
+    padding-left: 30px !important;
+    background: #4ECDC4;
+}
