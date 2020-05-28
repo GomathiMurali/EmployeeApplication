@@ -49,7 +49,6 @@ div.top-menu  {
     width: 65px;
 }
 
-
 body {
     color: #6c757d;
     background-color:  #f2f2f2;
@@ -120,8 +119,8 @@ div .left-box{
       word-wrap: break-word;
       background-color: #fff;
       background-clip: border-box;
-      border: 3px solid rgba(0, 0, 0, 0.125);
-      border-radius: 0.25rem;
+      border: 2px solid rgba(0, 0, 0, 0.125);
+      border-radius: 0.75rem;
   }
 
   .border-left-primary {
@@ -140,29 +139,6 @@ div .left-box{
     box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15)!important;
 }
 
-  .card {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-      word-wrap: break-word;
-      background-color: #fff;
-      background-clip: border-box;
-      border: 3px solid #e3e6f0;
-      border-radius: .35rem;
-  }
-  .card {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-      word-wrap: break-word;
-      background-color: #fff;
-      background-clip: border-box;
-      border: 3px solid #e3e6f0;
-      border-radius: .35rem;
-  }
-
 .myPieChart
 {
   margin-bottom: 40px;
@@ -172,30 +148,21 @@ div .left-box{
     width: 100%;
     overflow-x: hidden;
 }
-#wrapper #content-wrapper {
-    background-color: #f8f9fc;
-    width: 100%;
-    overflow-x: hidden;
-}
+
 .flex-column {
     flex-direction: column!important;
 }
 .d-flex {
     display: flex!important;
 }
-.flex-column {
-    flex-direction: column!important;
-}
-.d-flex {
-    display: flex!important;
-}
+
 #sidebar ul li a {
     padding: 13px;
     font-size: 15px;
     display: block;
 }
 ul ul a {
-    font-size: 15px;
+    font-size: 12px !important;
     padding-left: 30px !important;
     background: #4ECDC4;
 }
